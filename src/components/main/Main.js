@@ -6,8 +6,8 @@ import { searchName, searchIngredients } from '../../api/apiFunctions.js'
 
 
 function Main(props) {
-  const [name, setName] = useState("Pizza");
-  const [ingredients, setIngredients] = useState("meat,tomato,lettuce");
+  const [name, setName] = useState("");
+  const [ingredients, setIngredients] = useState("");
   const [vegan, setVegan] = useState(false);
   const [vegetarian, setVegetarian] = useState(false);
   const [gluten, setGluten] = useState(false);
