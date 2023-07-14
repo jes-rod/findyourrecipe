@@ -11,6 +11,19 @@ A simple recipe finder built in React and powered by the Spoonacular API .
 - [@jes-rod](https://github.com/jes-rod)
 
 
+
+## Languages, frameworks, libraries used
+
+- Javascript
+- React
+  - State hook
+  - API calls  
+- HTML
+- CSS
+- React Bootstrap
+- Webflow libraries
+
+
 ## Environment Variables
 
 If you want to run this project on your own, you will need to add the following environment variables to your .env file
