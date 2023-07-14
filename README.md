@@ -30,7 +30,8 @@ If you want to run this project on your own, you will need to add the following 
 
 ## Limitations
 
-- The amount of results per search is limited to 100 per the Spoonacular API (the app results are limited to 50 but it can be modified)
+- The amount of results per search is limited to 100 per the Spoonacular API (the app results are limited to 50 but it can be modified).
+- The demo version uses a trial plan for the Spoonacular API so there is a daily quota to perform searches and see recipe details. Considering an "action" to be searching and looking at a specific recipe details, the quota would allow around 120 actions per day.
 
 ## API Documentation
 
@@ -39,7 +40,7 @@ If you want to run this project on your own, you will need to add the following 
 
 ## Demo
 
-You can test the app with the following link :
+You can test the app with the following link : [FindYourRecipe Demo](https://findyourrecipeapp.netlify.app)
 
 
 ## Feedback
