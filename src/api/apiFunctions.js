@@ -13,7 +13,7 @@ export async function searchName(name, vegan, vegetarian, gluten) {
     diet.push("gluten%20free")
   }
   if(!diet){
-    const response = await fetch (`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${query}&number=50`);
+    const response = await fetch (`https://api.spoonacular.com/recipes/complexSearch?apiKey=${encodeURIComponent(apiKey)}&query=${query}&number=50`);
     const searchResults = await response.json();
     if(searchResults.code){
       return searchResults;
@@ -22,7 +22,7 @@ export async function searchName(name, vegan, vegetarian, gluten) {
     }
   }else{
     const sdiet = diet.toString();
-    const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${query}&number=50&diet=${sdiet}`);
+    const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${encodeURIComponent(apiKey)}&query=${query}&number=50&diet=${sdiet}`);
     const searchResults = await response.json();
     if(searchResults.code){
       return searchResults;
@@ -38,21 +38,21 @@ export async function searchName(name, vegan, vegetarian, gluten) {
 
 export async function searchIngredients(ingredients) {
   const query = ingredients.replaceAll(" ", ",");
-  const response = await fetch (`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${apiKey}&ingredients=${query}&number=50`);
+  const response = await fetch (`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${encodeURIComponent(apiKey)}&ingredients=${query}&number=50`);
   const searchResults = await response.json();
   return searchResults;
 }
 
 export async function getRecipeInfo(idNumber, image) {
   const id = idNumber.toString();
-  const infoResponse = await fetch (`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`);
+  const infoResponse = await fetch (`https://api.spoonacular.com/recipes/${id}/information?apiKey=${encodeURIComponent(apiKey)}`);
   const infoResults= await infoResponse.json();
   const ingredients = [];
   for (let i = 0 ; i < infoResults.extendedIngredients.length ; i++){
     ingredients.push(infoResults.extendedIngredients[i].original);
   }
   
-  const instructionsResponse = await fetch(`https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${apiKey}`)
+  const instructionsResponse = await fetch(`https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=${encodeURIComponent(apiKey)}`)
   const instructionsResults = await instructionsResponse.json();
   const instructions = [];
   for (let i = 0 ; i < instructionsResults.length ; i++){
