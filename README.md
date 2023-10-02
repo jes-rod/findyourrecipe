@@ -31,14 +31,11 @@ If you want to run this project on your own, you will need to add the following 
 `REACT_API_KEY`
 
 
-
-
 ## Features
 
 - Recipe search either by name or ingredients
 - When searching by name, you can filter results to show only vegan, vegetarian or gluten free recipes.
 - You can view the general details of each recipe, which includes the ingredients and the instructions to prepare it.
-
 
 
 ## Limitations
@@ -50,10 +47,9 @@ If you want to run this project on your own, you will need to add the following 
 
 [Spoonacular API Docs](https://spoonacular.com/food-api/docs)
 
+## Live
 
-## Demo
-
-You can test the app with the following link : [FindYourRecipe Demo](https://findyourrecipeapp.netlify.app)
+You can use the app with the following link : [FindYourRecipe](https://findyourrecipeapp.netlify.app)
 
 
 ## Feedback
