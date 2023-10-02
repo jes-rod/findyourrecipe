@@ -1,9 +1,7 @@
 
 # FinYourRecipe - React App 
 
-A simple recipe finder built in React and powered by the Spoonacular API .
-
-
+FINDYOURRECIPE is a website that serves as a recipe finder built in React and makes usage of the Spoonacular API to fetch the recipes data.
 
 
 ## Authors
