@@ -895,6 +895,13 @@ body {
     width: 70%;
   }
 
+  .slogan-div {
+    align-self: center;
+    text-align: center;
+    width: 50%;
+  }
+
+
   .label {
     font-size: 1.5rem;
   }
